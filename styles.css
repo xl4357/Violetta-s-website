@@ -1,0 +1,411 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Neue", sans-serif;
+  background: linear-gradient(270deg, #322158, #1a1957, #493780, #000000);
+  background-size: 800% 800%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+}
+
+.container {
+  height: 100vh; /* Full screen for home */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Gradient background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* interactive-text Hello */
+.interactive-text {
+  font-size: 7rem;
+  font-weight: bold;
+  z-index: 1000;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6);
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Animation */
+.floating {
+  position: absolute;
+  animation: float 5s ease-in-out infinite;
+}
+
+.floating:nth-child(1) {
+  top: 30%;
+  left: 20%;
+}
+
+.floating:nth-child(2) {
+  top: 50%;
+  right: 20%;
+}
+
+.floating:nth-child(3) {
+  top: 70%;
+  left: 50%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+li,
+a,
+button {
+  font-family: "Comic Neue", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #000132;
+  z-index: 1000;
+  padding: 1px 1%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  box-shadow: 0 3px 6px 0 #393742;
+  font-family: "Delius Unicase", cursive;
+}
+
+h1 {
+  margin-right: 10px;
+  font-size: 40px;
+}
+
+.nav_links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0 70px;
+}
+
+.nav_links li a:hover {
+  color: rgb(252, 255, 237);
+}
+
+button {
+  margin-left: 5px;
+  padding: 9px 25px;
+  background-color: #4f4966;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 18px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: rgb(108, 100, 149);
+}
+
+div {
+  color: rgb(255, 255, 255);
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* homepage */
+#home {
+  padding-top: 8%;
+  padding-bottom: 13%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 100px;
+  font-family: "Delius Unicase", cursive;
+  color: rgb(255, 255, 255);
+}
+
+/* project */
+#pers {
+  padding-top: 5%;
+  font-size: xx-large;
+  font-family: "Delius Unicase", cursive;
+}
+
+/* artwork */
+#comm {
+  padding-top: 5%;
+  font-size: xx-large;
+  font-family: "Delius Unicase", cursive;
+}
+
+/* contact */
+footer {
+  text-align: center;
+  background-color: #3e3e5b;
+  font-family: "Inconsolata", monospace;
+  padding: 1px;
+  box-shadow: 0 3px 6px 0 #393742;
+}
+
+footer .w3-large {
+  font-size: 16px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-with-description {
+  position: relative;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 254, 238, 0.7);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img {
+  width: 450px;
+  height: 325px;
+  padding: 0%;
+  padding-top: 1%;
+  border-radius: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* Adjust width for the number of slides */
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 700px; /* Image takes up the full width of the container */
+  height: 500px; /* Increase height for larger images */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Slide positioning */
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+/* Navigation dots */
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.controls label {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls label:hover,
+input[type="radio"]:checked + label {
+  background: #fff;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.project-item {
+  text-align: center;
+}
+
+.project-item img {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff8f8;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  gap: 30px;
+}
+
+#about .image-container {
+  margin-top: 100px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#about .image-container img {
+  width: 500px;
+  height: 700px;
+  border-radius: 10px;
+}
+
+#about p {
+  flex: 2;
+  font-size: 25px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}

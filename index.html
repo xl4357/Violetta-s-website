@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap" rel="stylesheet"-->
+<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
+
+
+<!--name of the website-->
+<title>Violetta</title>
+    </head>
+
+<body>
+
+<header>
+  <!--title of the website-->
+    <h1>Violetta.</h1>
+  <!--menu-->
+    <nav>
+        <ul class="nav_links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#comm">Projects</a></li>
+            <li><a href="#pers">Artworks</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--Homepage interactivity text-->
+<div class="container" id="home">
+  <h2 class="interactive-text">Hello <span class="auto-type"></span></h2>
+
+  <!--Homepage interactivity image-->
+  <div class="floating">
+    <img src="image/homepage1.png" alt="1" style="width: 100px; opacity: 0.8;">
+</div>
+<div class="floating">
+    <img src="image/homepage2.png" alt="2" style="width: 90px; opacity: 0.6;">
+</div>
+<div class="floating">
+    <img src="image/homepage3.png" alt="3" style="width: 100px; opacity: 0.5;">
+</div>
+
+</div>
+
+<!--about-->
+
+<div id="about">
+  <div class="image-container">
+    
+    <img src="image/self.png" alt="About Myself">
+  </div>
+  <p> Hi! I'm Violetta. I am pursuing a double major in Media, Culture, and 
+Communication alongside Philosophy at New York University as a 
+dedicated undergraduate student. Beyond my academic interests, I 
+am deeply passionate about feminism, filmmaking, and art, and I 
+enjoy exploring topics related to human nature and society through 
+creative projects. This website showcases a collection of my works, 
+including interactive media projects, digital paintings, and film 
+projects, reflecting my journey and growth as a storyteller and 
+thinker.
+  </p>
+</div>
+
+  <!--project-->
+
+<div id="comm">
+  <p>Projects</p>
+  <div class="project-grid">
+    <div class="project-item">
+      <a href="https://xl4357.github.io/Com-lab">
+        <img src="image/cats on campus.jpg" alt="assignment 1">
+      </a>
+      <p>Cats on Campus</p>
+    </div>
+    <div class="project-item">
+      <a href="https://shoeboxhoney.github.io/InteractiveComic_CommLab/">
+        <img src="image/echo.png" alt="assignment 2">
+      </a>
+      <p>Echos Interactive Comics</p>
+    </div>
+    <div class="project-item">
+      <a href="https://marcosnigp1.github.io/sound-project/">
+        <img src="image/class harmony.png" alt="assignment 3">
+      </a>
+      <p>Class Harmony</p>
+    </div>
+    <div class="project-item">
+      <a href="https://ivan-si.github.io/MovieWebsiteCommLab/">
+        <img src="image/painting.png" alt="assignment 4">
+      </a>
+      <p>How to Create a Painting</p>
+    </div>
+  </div>
+</div>
+
+  <!--artwork-->
+
+<div id="pers">
+  <h2>Works</h2>
+  <div class="slideshow-container">
+    <div class="slideshow">
+      <input type="radio" name="slides" id="slide1" checked>
+      <input type="radio" name="slides" id="slide2">
+      <input type="radio" name="slides" id="slide3">
+
+      <div class="slides">
+        <div class="slide">
+          <img src="image/art1.jpg" alt="Art 1">
+          <div class="caption">artwork1</div>
+        </div>
+        <div class="slide">
+          <img src="image/art2.jpg" alt="Art 2">
+          <div class="caption">artwork2</div>
+        </div>
+        <div class="slide">
+          <img src="image/art3.jpg" alt="Art 3">
+          <div class="caption">artwork3</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+     <!-- Contact Section -->
+ <div class="w3-container w3-padding-32" id="contact">
+    <div class="w3-col m4 w3-container"></div> 
+    
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span>New York, NY - </span>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span> - +86 18260021220 -</span>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span>   - xl4357@nyu.edu</span>
+      </div>
+      <span style="font-size: 15px;">- - Violetta Li - -</span>
+</footer>
+
+
+<!--Hello text interactivity-->
+<script>
+  const helloText = document.querySelector('.interactive-text');
+
+  document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth * 50;
+      const y = e.clientY / window.innerHeight * 50;
+      helloText.style.transform = `translate(${x}px, ${y}px)`;
+  });
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
