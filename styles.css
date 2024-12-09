@@ -409,3 +409,102 @@ input[type="radio"]:checked + label {
   text-align: left;
   margin: 0;
 }
+
+/* General responsiveness for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  /* Reduce font sizes for smaller screens */
+  .interactive-text {
+    font-size: 4rem;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .nav_links {
+    flex-direction: column; /* Stack navigation links */
+    align-items: flex-start; /* Align to the left */
+    padding: 0;
+    gap: 10px;
+  }
+
+  .nav_links li {
+    padding: 5px 0;
+  }
+
+  #home {
+    font-size: 80px; /* Reduce hero text size */
+    padding: 5% 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 15px;
+  }
+
+  .project-item img {
+    width: 100%; /* Adjust image size */
+  }
+
+  #about {
+    flex-direction: column; /* Stack about section */
+    gap: 20px;
+  }
+
+  #about .image-container img {
+    width: 80%; /* Resize image for small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  #about p {
+    text-align: center; /* Center text for better readability */
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 14px; /* Reduce footer text size */
+    padding: 10px;
+  }
+}
+
+/* Further adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+  .interactive-text {
+    font-size: 3rem; /* Reduce further for small phones */
+  }
+
+  header {
+    flex-direction: column; /* Stack header elements */
+    align-items: center;
+  }
+
+  .nav_links {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .slideshow-container {
+    width: 100%; /* Full width for slides */
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto; /* Maintain image proportions */
+  }
+
+  #home {
+    font-size: 60px; /* Smaller hero text */
+  }
+
+  .project-grid {
+    margin: 10px 0; /* Add spacing for smaller screens */
+  }
+
+  #about p {
+    font-size: 18px; /* Optimize text size for mobile */
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
