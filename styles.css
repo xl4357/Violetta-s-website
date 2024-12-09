@@ -508,3 +508,39 @@ input[type="radio"]:checked + label {
     font-size: 12px;
   }
 }
+
+/* Adjust artwork slideshow images for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .slideshow-container {
+    width: 100%; /* Use full width */
+  }
+
+  .slide img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .caption {
+    font-size: 14px; /* Reduce caption text size */
+    padding: 8px;
+  }
+}
+
+/* Further adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+  .slideshow-container {
+    width: 100%; /* Full width for mobile screens */
+    margin: 10px auto; /* Add spacing around the slideshow */
+  }
+
+  .slide img {
+    width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Adjust border-radius for smaller screens */
+  }
+
+  .caption {
+    font-size: 12px; /* Smaller captions for mobile */
+    padding: 5px;
+  }
+}
